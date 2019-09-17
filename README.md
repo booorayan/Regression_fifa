@@ -30,13 +30,13 @@ To challenge the solution, xgboost classifier model was used.
 
 ### Experiment Design
 This project followed the CRISP-DM methodology for the experiment design. The CRISP-DM methodology has the following steps:
+
 ####   1.   Problem understanding: 
-Entailed gaining an understanding of the research problem and the objectives to be met for the project. External research was conducted to gain an understanding of electric car sharing services. 
+Entailed gaining an understanding of the research problem and the objectives to be met for the project. External research was conducted to gain an understanding of the fifa ranking system. 
 The metrics for success were also defined in this phase.
 Some metrics for success included:
-  *   Get a sample(s) of the data 
-  *   Determine the p-value
-  *   Reject or accept/fail to reject the null hypothesis
+  *   Two polynomial regression models that predict the number of goals scored by the Home and away teams
+  *   A logistic regression model that predicts the outcome of a football match between two teams.  
    
 ####   2.   Data understanding: 
 Entailed the initial familiarization with and exploration of the dataset, as well as the evaluation of the quality of the dataset provided for the study.
@@ -106,29 +106,17 @@ Therefore, a linear model can serve as a good fit.
 The OLS Regression summary revealed that the slots_taken_sum column is statistically insignificant and can be excluded from our model.
 
 ####   5.   Evaluation: 
-Groupby() method was used to challenge the result of hypothesis testing. The population was grouped by dayofweek and the results revealed a slight difference in the total number of bluecars taken between Monday and Friday.
+XGBoost classification model was used to challenge the predictions by polynomial and logistic regression models. The distribution of predictions was also analysed and compared with the distribution for the test set.
 
-            # grouping the population by day of week and displaying the sum of bluecars taken each day
-
-            group_cars = autob.groupby('dayofweek')[['bluecars_taken_sum']].sum()
-            group_cars.head()
-
+            
 ### Conclusion
 
 
 *   Regression models (polynomial and logistic models) are not the best models for predicting goals scored and match outcomes.
-
-*   
-
-*   
-
 *   An assumption taken for this project is that the ranking system was the same between 2006-2018
+*   The accuracy of predictions can be improved by stacking more models together
 
 
 ### License
 
 Copyright (c) 2019 **Booorayan**
-
-This project followed the CRISP-DM methodology for the experiment design. The CRISP-DM methodology has the following steps:
-
-
