@@ -100,13 +100,14 @@ The model chosen for this project wasa linear regression model
             # calculating the coefficient of determinantion, R2
             r2_score(target_test,pred)
 
-The R squared value indicated that a linear model explains approx. 94.63% of response data variability
-Therefore, a linear model can serve as a good fit.
+The R squared value indicated that a polynomial model explains only approx. 5% of response data variability
+Therefore, a polynomial regression models are not the perfect models for this prediction problem.
 
-The OLS Regression summary revealed that the slots_taken_sum column is statistically insignificant and can be excluded from our model.
 
 ####   5.   Evaluation: 
-XGBoost classification model was used to challenge the predictions by polynomial and logistic regression models. The distribution of predictions was also analysed and compared with the distribution for the test set.
+XGBoost classification model was used to challenge the predictions by polynomial and logistic regression models. 
+
+The distribution of predictions was also analysed and compared with the distribution for the test set.
 
             
 ### Conclusion
